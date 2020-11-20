@@ -131,7 +131,7 @@ class Main extends Component {
 
   render () {
     return (
-      <div>
+      <div className="col-md-4 col-md-offset-4">
         <ProfileBar
           picture={this.props.user.photoURL}
           username={this.props.user.email.split('@')[0]}

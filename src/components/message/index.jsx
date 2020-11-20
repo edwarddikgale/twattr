@@ -55,8 +55,7 @@ class Message extends Component {
               <img className={styles.avatar} src={this.props.picture} />
             </figure>
           </Link>
-          <span className={styles.displayName}> {this.props.displayName}</span>
-          <span className={styles.username}> {this.props.username}</span>
+          <span className={styles.displayName}> {this.props.displayName || this.props.username }</span>
           <span className={styles.date}> {dateFormat}</span>
         </div>
         <h3>{this.props.text}</h3>

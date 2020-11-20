@@ -1,10 +1,11 @@
 .text{
 	border-radius: 5px;
-	border: 1px solid #ddd;
+	border: 2px solid rgb(123, 122, 122);
 	width: 90%;
 	height: 5em;
 	padding: 0.75em;
 	margin: 1em 0.5em;
+	font-size: 12pt;
 }
 
 .buttons{
@@ -12,8 +13,8 @@
 	justify-content: flex-end;
 }
 
-.buttons > button {
-	border-radius: 5px;
+.buttons > button {	
+	border-radius: 10px;
 	padding: 0.5em 0.75em;
 	margin: 0.25em;
 }
@@ -21,10 +22,12 @@
 .close{
 	background-color: #fff;
 	border: 1px solid #ddd;
+	font-size: 12pt;
 }
 
 .send{
 	background-color: #2d84cc;
 	border: 1px solid #226aa6;
 	color: #fff;
+	font-size: 12pt;
 }

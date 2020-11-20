@@ -12,16 +12,20 @@ const propTypes = {
 function Profile ({ picture, displayName, username, emailAdress }) {
   return (
     <div className={styles.root}>
-      <img className={styles.avatar} src={picture} />
-      <span className={styles.name}> {displayName}</span>
-      <ul className={styles.data}>
-        <li>
-          <span className='fa fa-user'></span> {username}
-        </li>
-        <li>
-          <span className='fa fa-envelope'></span> {emailAdress}
-        </li>
-      </ul>
+
+      <div className="col-md-4 col-md-offset-4">
+        <img className={styles.avatar} src={picture || ''} />
+        <span className={styles.name}> {displayName}</span>
+        <ul className={styles.data}>
+          <li>
+            <span className='fa fa-user'></span> {username}
+          </li>
+          <li>
+            <span className='fa fa-envelope'></span> {emailAdress}
+          </li>
+        </ul>
+      </div>
+
     </div>
   )
 }

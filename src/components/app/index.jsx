@@ -9,6 +9,7 @@ import Main from '../main'
 import Profile from '../profile'
 import Login from '../login'
 import Signup from '../signup'
+import styles from './styles.css'
 
 class App extends Component {
   constructor () {
@@ -50,7 +51,7 @@ class App extends Component {
   render () {
     return (
       <HashRouter>
-        <div>
+        <div className={styles.body}>
           <Header />
           <Switch>
             <Route exact path='/' render={() => {

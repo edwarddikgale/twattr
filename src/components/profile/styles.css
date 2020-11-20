@@ -27,7 +27,7 @@
 .data > li{
 	background-color: #fff;
 	padding: 1em;
-	margin: 0;
+	margin: 0.1em;
 	border: 1px solid #ddd;
 	color: #777;
 }

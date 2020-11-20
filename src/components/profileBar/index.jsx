@@ -18,12 +18,12 @@ function ProfileBar ({ picture, username, onOpenText, onLogout }) {
         </figure>
       </Link>
       <span className={styles.username}> Hey @{username}!</span>
-      <button onClick={onOpenText} className={styles.button}>
-        <span className='fa fa-lg fa-edit'></span> Tweet!
-      </button>
-      <button onClick={onLogout} className={styles.button}>
-        <span className='fa fa-sign-out'></span> Salir
-      </button>
+        <button onClick={onOpenText} className={styles.button}>
+          <span className='fa fa-lg fa-edit'></span> CREATE AN UPDATE!
+        </button>
+        <button onClick={onLogout} className={styles.button}>
+          <span className='fa fa-sign-out'></span> SIGN OUT
+        </button>
     </div>
   )
 }
