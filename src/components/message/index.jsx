@@ -58,7 +58,7 @@ class Message extends Component {
           <span className={styles.displayName}> {this.props.displayName || this.props.username }</span>
           <span className={styles.date}> {dateFormat}</span>
         </div>
-        <h3>{this.props.text}</h3>
+        <h3 className={styles.displayLinebreak}>{this.props.text}</h3>
         <div className={styles.buttons}>
           <div
             className={styles.icon}

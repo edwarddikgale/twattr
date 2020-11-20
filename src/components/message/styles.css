@@ -1,7 +1,7 @@
 .root{
-	background-color: #fff;
-	border:1px solid #ccc;
-	border-radius: 5px;
+	background-color:#e3f9ff;
+	border-bottom: 3px solid #EEEBD2;
+	/*border-radius: 5px;*/
 	padding: 1em;
 	margin: 0.5em;
 }
@@ -69,3 +69,9 @@
 .favYellow{
 	color: #e2c400;
 }
+
+.displayLinebreak {
+	white-space: pre-line;
+	font-family: 'Ubuntu';
+	font-size: 20px;
+  }

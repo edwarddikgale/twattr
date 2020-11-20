@@ -6,7 +6,7 @@ function Header () {
   return (
     <header className={styles.root}>
       <Link to="/" style={{ textDecoration: 'none' }}>
-        <h1 className={styles.logo}>Sustain-ice highlights</h1>
+        <h1 className={styles.logo}>RETH: REAL ESTATE TECH HIGHLIGHTS</h1>
       </Link>
     </header>
   )
