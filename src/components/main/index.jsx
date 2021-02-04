@@ -5,6 +5,7 @@ import firebase from 'firebase'
 import MessageList from '../messageList'
 import InputText from '../InputText'
 import ProfileBar from '../ProfileBar'
+import Update from '../update';
 
 const propTypes = {
   user: PropTypes.object.isRequired,
@@ -31,14 +32,33 @@ class Main extends Component {
   }
 
   componentDidMount () {
-    const messagesRef = firebase.database().ref().child('messages')
+    const messagesRef = firebase.database().ref().child('messages');
 
+    messagesRef.on('value', snapshot => {
+      
+      console.log('loading messages now...');
+      var messageList = [];
+      snapshot.forEach(child => {
+        var msg = child.val();
+        messageList.push(msg);
+        //console.log(JSON.stringify(msg));
+      });
+      console.log(JSON.stringify(messageList));
+
+      this.setState(prevState => ({
+        messages: [].concat(messageList),
+        openText: false
+      }))
+
+    });
+
+    /*
     messagesRef.on('child_added', snapshot => {
       this.setState(prevState => ({
         messages: prevState.messages.concat(snapshot.val()),
         openText: false
       }))
-    })
+    })*/
   }
 
   handleSendText (event) {
@@ -84,7 +104,7 @@ class Main extends Component {
   renderOpenText () {
     if (this.state.openText) {
       return (
-        <InputText
+        <Update
           onSendText={this.handleSendText}
           onCloseText={this.handleCloseText}
           userNameToReply={this.state.userNameToReply}
@@ -146,6 +166,7 @@ class Main extends Component {
           onReplyTweet={this.handleReplyTweet}
         />
       </div>
+      
     )
   }
 }

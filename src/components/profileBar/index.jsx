@@ -17,7 +17,7 @@ function ProfileBar ({ picture, username, onOpenText, onLogout }) {
           <img className={styles.avatar} src={picture} />
         </figure>
       </Link>
-      <span className={styles.username}> Hey @{username}!</span>
+      <span className={styles.username}>&nbsp;Hey @{username}!</span>
         <button onClick={onOpenText} className={styles.button}>
           <span className='fa fa-lg fa-edit'></span> CREATE AN UPDATE!
         </button>

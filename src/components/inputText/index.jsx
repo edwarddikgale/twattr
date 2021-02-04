@@ -11,8 +11,8 @@ const propTypes = {
 function InputText ({ onSendText, onCloseText, userNameToReply }) {
   return (
     <form className={styles.form} onSubmit={onSendText}>
-      <textarea className={styles.text} name='text'>
-        {(userNameToReply) ? `@${userNameToReply} ` : ''}
+      <textarea className={styles.text} name='text' defaultValue={(userNameToReply) ? `@${userNameToReply} ` : ''}>
+        
       </textarea>
       <div className={styles.buttons}>
         <button className={styles.close} onClick={onCloseText}>Close</button>

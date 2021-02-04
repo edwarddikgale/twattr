@@ -77,7 +77,7 @@ class Message extends Component {
             className={(this.state.pressFavorite) ? styles.favYellow : ''}
             onClick={this.onPressFavorite}
           >
-            <span className='fa fa-star'></span>
+            <span className='fa fa-thumbs-up'></span>
             <span className={styles.number}>{this.props.numFavorites}</span>
           </div>
         </div>

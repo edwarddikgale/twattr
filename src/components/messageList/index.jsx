@@ -15,23 +15,28 @@ function MessageList ({ messages, onRetweet, onFavorite, onReplyTweet }) {
   return (
     <div className={styles.root}>
       {messages.map(msg => {
+        // msg.id = msg.id?  msg.id : Math.floor(Math.random() * 10000) + 1;
         return (
           <Message
             key={msg.id}
-            text={msg.text}
+            text={msg.text || '...'}
             picture={msg.picture}
             displayName={msg.displayName}
-            username={msg.username}
-            date={msg.date}
-            numRetweets={msg.retweets}
-            numFavorites={msg.favorites}
+            username={msg.username || 'unknown'}
+            date={msg.date || Date.now()}
+            numRetweets={msg.retweets || 0}
+            numFavorites={msg.favorites || 0}
             onRetweet={() => onRetweet(msg.id)}
             onFavorite={() => onFavorite(msg.id)}
             onReplyTweet={() => onReplyTweet(msg.id, msg.username)}
           />
         )
       }).reverse()}
+      <div className="col-md-8 col-md-offset-2">
+        Message list should appear here...
+      </div>
     </div>
+    
   )
 }
 
